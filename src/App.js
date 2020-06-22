@@ -1,24 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy } from 'react';
+import './i18n'
+import './intern';
+import './main.css'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import {
+  CssBaseline,
+} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+const Footer = lazy(() => import('./components/Footer'));
+const EmptyMenu = lazy(() => import('./components/EmptyMenu'));
+const About = lazy(() => import('./components/About'));
+const DataUsePolicy = lazy(() => import('./components/DataUsePolicy'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Imprint = lazy(() => import('./components/Imprint'));
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+
+  appBarSpacer: theme.mixins.toolbar,
+  content: {
+    display: "flex",
+    flexDirection: 'column',
+    minHeight: '100vh',
+    flexGrow: 1,
+    height: '100vh',
+    overflow: 'auto',
+  }
+}));
+
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <CssBaseline />
+      <EmptyMenu />
+      <main lang="de" className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <About />
+            </Route>
+            <Route path="/datausepolicy">
+              <DataUsePolicy />
+            </Route>
+            <Route path="/imprint">
+              <Imprint />
+            </Route>
+            <Route path="/faq">
+              <FAQ />
+            </Route>
+            <Redirect from="*" to="/" />
+          </Switch>
+        </Router>
+        <Footer />
+      </main>
     </div>
   );
 }

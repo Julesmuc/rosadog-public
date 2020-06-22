@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  rosadog-public:
+    container_name: rosadog-public
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    networks:
+      - proxy
+    expose:
+      - "1337"
+    ports:
+      - 1337:80
+    restart: always
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VIRTUAL_HOST=www.rosadog.com, rosadog.com, www,rosadog.de, rosadog.de
+      - VIRTUAL_PORT=1337
+      - LETSENCRYPT_HOST=www.rosadog.com, rosadog.com, www,rosadog.de, rosadog.de
+      - LETSENCRYPT_EMAIL=info@rosadog.de
+networks:
+  proxy:
+    external:
+      name: nginx-proxy
