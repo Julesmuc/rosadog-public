@@ -17,9 +17,9 @@ services:
     restart: always
     environment:
       - CHOKIDAR_USEPOLLING=true
-      - VIRTUAL_HOST=*test.rosadog.de, *test.rosadog.com
+      - VIRTUAL_HOST=www.rosadog.de, www.rosadog.com, rosadog.de, rosadog.com
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=*test.rosadog.de, *test.rosadog.com
+      - LETSENCRYPT_HOST=www.rosadog.de, www.rosadog.com, rosadog.de, rosadog.com
       - LETSENCRYPT_EMAIL=info@rosadog.de
 networks:
   proxy:
