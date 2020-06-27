@@ -63,7 +63,7 @@ export default function About() {
                                 height: "54px",
                                 fontSize: "15px",
                                 padding: "0 28px",
-                            }} label={t('registerForFree')} target="_blank" href={'https://www.app.rosadog.com/registration'} >
+                            }} label={t('registerForFree')} target="_blank" rel="noopener noreferrer" href={'https://www.app.rosadog.com/registration'} >
                             </PositiveButton>
                         </div>
                         <div className={classes.alignText}>
@@ -73,7 +73,7 @@ export default function About() {
                             >{t('or')}</h2>
                         </div>
                         <div className={classes.alignText}>
-                            <OutlinedPositiveButton label={t('login')} href={'https://www.app.rosadog.com/login'} >
+                            <OutlinedPositiveButton label={t('login')} target="_blank" rel="noopener noreferrer"  href={'https://www.app.rosadog.com/login'} >
                             </OutlinedPositiveButton>
                         </div>
                     </Grid>
@@ -258,7 +258,7 @@ export default function About() {
                         </div>
                         <div className="col s12 m8">
                             <div className="section"></div>
-                            <a href="https://www.app.rosadog.com/registration" className="btn-large waves-effect teal darken-3 pulse"
+                            <a href="https://www.app.rosadog.com/registration" rel="noopener noreferrer" target="_blank"  className="btn-large waves-effect teal darken-3 pulse"
                             >{t('registerForFree')}
                             </a>
                         </div>
