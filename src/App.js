@@ -7,6 +7,9 @@ import {
   CssBaseline,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+
+import { Helmet } from "react-helmet";
+import { useTranslation } from 'react-i18next';
 const Footer = lazy(() => import('./components/Footer'));
 const EmptyMenu = lazy(() => import('./components/EmptyMenu'));
 const About = lazy(() => import('./components/About'));
@@ -33,12 +36,20 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App() {
+  const { t } = useTranslation();
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{t('rosadogTitle')}</title>
+        <meta name="og:title" content={t('rosadogTitle')}/>
+        <meta name="description" content={t('rosadogDescription')} />
+        <meta name="og:description" content={t('rosadogDescription')} />
+      </Helmet>
       <CssBaseline />
       <EmptyMenu />
-      <main lang="de" className={classes.content}>
+      <main lang={t('localelocale')} className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Router>
           <Switch>

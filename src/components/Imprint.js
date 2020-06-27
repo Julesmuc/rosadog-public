@@ -4,6 +4,7 @@ import {
     Grid, Typography, Container
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +29,13 @@ export default function ImprintPage() {
     return (
         <div className={classes.content}>
             <Container maxWidth="lg">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{t('imprint')}</title>
+                <meta name="og:title" content={t('imprint')} />
+                <meta name="description" content={t('imprint')} />
+                <meta name="og:description" content={t('imprint')} />
+            </Helmet>
                 <Grid container className={classes.root} spacing={3}>
                     <Grid item xs={12}>
                         <Typography className={classes.text} variant="h3" component="h3" gutterBottom>
