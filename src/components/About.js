@@ -58,6 +58,10 @@ export default function About() {
                         }} align="center" variant="h2" component="h2">
                             {t('welcomeIntro')}
                         </Typography>
+                        <h2 class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter" style={{ 
+                            wordBreak: "break-word", 
+                            fontSize: "2rem", 
+                            marginBottom: "30px" }}> {t('rosadogPWA')}  <a href="https://support.google.com/chrome/answer/9658361?co=GENIE.Platform%3DAndroid&amp;hl=de">{t('hier')}</a> </h2>
                         <div className={classes.alignText}>
                             <PositiveButton style={{
                                 height: "54px",
@@ -73,7 +77,7 @@ export default function About() {
                             >{t('or')}</h2>
                         </div>
                         <div className={classes.alignText}>
-                            <OutlinedPositiveButton label={t('login')} target="_blank" rel="noopener noreferrer"  href={'https://www.app.rosadog.com/login'} >
+                            <OutlinedPositiveButton label={t('login')} target="_blank" rel="noopener noreferrer" href={'https://www.app.rosadog.com/login'} >
                             </OutlinedPositiveButton>
                         </div>
                     </Grid>
@@ -258,7 +262,7 @@ export default function About() {
                         </div>
                         <div className="col s12 m8">
                             <div className="section"></div>
-                            <a href="https://www.app.rosadog.com/registration" rel="noopener noreferrer" target="_blank"  className="btn-large waves-effect teal darken-3 pulse"
+                            <a href="https://www.app.rosadog.com/registration" rel="noopener noreferrer" target="_blank" className="btn-large waves-effect teal darken-3 pulse"
                             >{t('registerForFree')}
                             </a>
                         </div>

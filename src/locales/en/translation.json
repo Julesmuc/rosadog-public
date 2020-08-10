@@ -326,5 +326,7 @@
   "rosadogTitle": "rosadog | Digital health diary for dogs",
   "rosadogDescription": "rosadog is a digital health diary for your healthy or sick dog. It enables tracking of food, symptoms, weight and medication",
   "rosadogFAQ": "rosadog | FAQ",
-  "rosadogFAQDescription": "The most important questions about using rosadog"
+  "rosadogFAQDescription": "The most important questions about using rosadog",
+  "rosadogPWA": "rosadog can be used 100% on your mobile phone and can be installed as a PWA! \nYou may find more information",
+  "hier": "here"
 }

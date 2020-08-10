@@ -326,5 +326,7 @@
   "rosadogTitle": "rosadog | Digitales Gesundheitstagebuch für Hunde",
   "rosadogDescription": "rosadog ist ein digitales Gesundheitstagebuch für Ihren gesunden oder kranken Hund. Es ermöglicht das Tracking von Futter, Symptomen, Gewicht und Medikamenten",
   "rosadogFAQ": "rosadog | FAQ",
-  "rosadogFAQDescription": "Die wichtigsten Fragen zur rosadog Benutzung"
+  "rosadogFAQDescription": "Die wichtigsten Fragen zur rosadog Benutzung",
+  "rosadogPWA": "rosadog ist zu 100% auf dem Handy bedienbar und kann als PWA installiert werden! Mehr Informationen findest du",
+  "hier": "hier"
 }
